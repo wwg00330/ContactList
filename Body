@@ -1,0 +1,41 @@
+import java.util.Scanner; 
+
+public class LabProgram {
+   
+public static String getPhoneNumber(String[] nameVec, String[] phoneNumberVec, String contactName, int arraySize){
+  int index = 0;
+   int i = 0;
+   for( i =0;i<arraySize;i++){
+      if (nameVec[i] == contactName){
+         index = i;
+      
+      
+      }
+ 
+   
+}
+return phoneNumberVec[index];
+}
+
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int arraySize = scnr.nextInt();
+      String[] nameVec = new String[20];
+      String[]  phoneNumberVec = new String [20];
+      
+      
+     
+      
+      for(int i =0; i<arraySize;i++){
+         nameVec[i]= scnr.next();
+         phoneNumberVec[i]=scnr.next(); 
+      }
+     
+      
+      String contactName = scnr.next();
+   
+      String phoneNum;
+       phoneNum = getPhoneNumber(nameVec,phoneNumberVec,contactName,arraySize);
+       System.out.println(phoneNum);
+   }
+}
